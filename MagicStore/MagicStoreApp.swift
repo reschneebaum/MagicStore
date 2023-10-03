@@ -12,7 +12,7 @@ import SwiftData
 struct MagicStoreApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Card.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,9 @@ struct MagicStoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                CardSearchView()
+            }
         }
         .modelContainer(sharedModelContainer)
     }

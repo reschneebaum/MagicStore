@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		C414E51F2ACCAE64008CE01F /* MagicStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E51E2ACCAE64008CE01F /* MagicStoreApp.swift */; };
 		C414E5212ACCAE64008CE01F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5202ACCAE64008CE01F /* ContentView.swift */; };
-		C414E5232ACCAE64008CE01F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5222ACCAE64008CE01F /* Item.swift */; };
 		C414E5252ACCAE65008CE01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C414E5242ACCAE65008CE01F /* Assets.xcassets */; };
 		C414E5282ACCAE65008CE01F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C414E5272ACCAE65008CE01F /* Preview Assets.xcassets */; };
 		C414E5342ACCAE65008CE01F /* MagicStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5332ACCAE65008CE01F /* MagicStoreTests.swift */; };
 		C414E53E2ACCAE65008CE01F /* MagicStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E53D2ACCAE65008CE01F /* MagicStoreUITests.swift */; };
 		C414E5402ACCAE65008CE01F /* MagicStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E53F2ACCAE65008CE01F /* MagicStoreUITestsLaunchTests.swift */; };
+		C414E54E2ACCB105008CE01F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E54D2ACCB105008CE01F /* Card.swift */; };
+		C414E5512ACCBB6E008CE01F /* CardSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5502ACCBB6E008CE01F /* CardSearchView.swift */; };
+		C414E5532ACCBF71008CE01F /* Mana.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5522ACCBF71008CE01F /* Mana.swift */; };
+		C414E5552ACCC104008CE01F /* CardSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5542ACCC104008CE01F /* CardSymbol.swift */; };
+		C414E5572ACCC295008CE01F /* MyCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5562ACCC295008CE01F /* MyCardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 		C414E51B2ACCAE64008CE01F /* MagicStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C414E51E2ACCAE64008CE01F /* MagicStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicStoreApp.swift; sourceTree = "<group>"; };
 		C414E5202ACCAE64008CE01F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C414E5222ACCAE64008CE01F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C414E5242ACCAE65008CE01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C414E5272ACCAE65008CE01F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C414E5292ACCAE65008CE01F /* MagicStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MagicStore.entitlements; sourceTree = "<group>"; };
@@ -48,6 +51,11 @@
 		C414E5392ACCAE65008CE01F /* MagicStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C414E53D2ACCAE65008CE01F /* MagicStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicStoreUITests.swift; sourceTree = "<group>"; };
 		C414E53F2ACCAE65008CE01F /* MagicStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C414E54D2ACCB105008CE01F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C414E5502ACCBB6E008CE01F /* CardSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSearchView.swift; sourceTree = "<group>"; };
+		C414E5522ACCBF71008CE01F /* Mana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mana.swift; sourceTree = "<group>"; };
+		C414E5542ACCC104008CE01F /* CardSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSymbol.swift; sourceTree = "<group>"; };
+		C414E5562ACCC295008CE01F /* MyCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +106,10 @@
 		C414E51D2ACCAE64008CE01F /* MagicStore */ = {
 			isa = PBXGroup;
 			children = (
+				C414E54F2ACCBB54008CE01F /* Views */,
+				C414E54C2ACCB0F3008CE01F /* Models */,
 				C414E51E2ACCAE64008CE01F /* MagicStoreApp.swift */,
 				C414E5202ACCAE64008CE01F /* ContentView.swift */,
-				C414E5222ACCAE64008CE01F /* Item.swift */,
 				C414E5242ACCAE65008CE01F /* Assets.xcassets */,
 				C414E5292ACCAE65008CE01F /* MagicStore.entitlements */,
 				C414E52A2ACCAE65008CE01F /* Info.plist */,
@@ -132,6 +141,25 @@
 				C414E53F2ACCAE65008CE01F /* MagicStoreUITestsLaunchTests.swift */,
 			);
 			path = MagicStoreUITests;
+			sourceTree = "<group>";
+		};
+		C414E54C2ACCB0F3008CE01F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C414E54D2ACCB105008CE01F /* Card.swift */,
+				C414E5522ACCBF71008CE01F /* Mana.swift */,
+				C414E5542ACCC104008CE01F /* CardSymbol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C414E54F2ACCBB54008CE01F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C414E5502ACCBB6E008CE01F /* CardSearchView.swift */,
+				C414E5562ACCC295008CE01F /* MyCardsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +293,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C414E5212ACCAE64008CE01F /* ContentView.swift in Sources */,
-				C414E5232ACCAE64008CE01F /* Item.swift in Sources */,
+				C414E5512ACCBB6E008CE01F /* CardSearchView.swift in Sources */,
+				C414E5532ACCBF71008CE01F /* Mana.swift in Sources */,
+				C414E5552ACCC104008CE01F /* CardSymbol.swift in Sources */,
+				C414E5572ACCC295008CE01F /* MyCardsView.swift in Sources */,
 				C414E51F2ACCAE64008CE01F /* MagicStoreApp.swift in Sources */,
+				C414E54E2ACCB105008CE01F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

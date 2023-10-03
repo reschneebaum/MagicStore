@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+enum ManaColor: String, Codable {
+    case black = "B"
+    case blue = "U"
+    case green = "G"
+    case red = "R"
+    case white = "W"
+    case colorless = "C"
+
+    var rawSymbol: String {
+        "{\(rawValue)}"
+    }
+}

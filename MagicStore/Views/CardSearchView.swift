@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct CardSearchView: View {
+    @State private var searchText = ""
+    @State private var results: [SearchResult] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(self.results) {
+                SearchResultView(result: $0)
+            }
+        }
+        .searchable(
+            text: $searchText,
+            placement: .navigationBarDrawer(displayMode: .always),
+            prompt: "Search"
+        )
+        .navigationTitle("Card Search")
+    }
+}
+
+private struct SearchResultView: View {
+    var result: SearchResult
+    
+    var body: some View {
+        VStack {
+            Text("\(result.name)")
+        }
     }
 }
 
 #Preview {
-    CardSearchView()
+    NavigationStack {
+        CardSearchView()
+    }
 }
