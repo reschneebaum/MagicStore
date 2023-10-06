@@ -14,10 +14,6 @@ struct CardSearchView: View {
     
     var body: some View {
         List {
-            ForEach(self.results) {
-                SearchResultView(result: $0)
-            }
-            
             Button("random") {
                 Task {
                     do {
@@ -28,12 +24,25 @@ struct CardSearchView: View {
                     }
                 }
             }
+            
+            ForEach(self.results) {
+                SearchResultView(result: $0)
+            }
         }
         .searchable(
             text: $searchText,
             placement: .navigationBarDrawer(displayMode: .always),
             prompt: "Search"
         )
+        .onSubmit(of: .search) {
+            Task {
+                do {
+                    results = try await service.search(searchText).data
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
         .navigationTitle("Card Search")
     }
 }

@@ -1,5 +1,5 @@
 //
-//  SearchError.swift
+//  ScryfallError.swift
 //  MagicStore
 //
 //  Created by Rachel Schneebaum on 10/3/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchError: Error {
+struct ScryfallError: Error {
     var status: Int
     var code: String
     var details: String
@@ -15,10 +15,10 @@ struct SearchError: Error {
     var warnings: [String]?
 }
 
-extension SearchError: LocalizedError {
+extension ScryfallError: LocalizedError {
     var errorDescription: String? {
         "\(status) error: \(details)"
     }
 }
 
-extension SearchError: Codable {}
+extension ScryfallError: Codable {}

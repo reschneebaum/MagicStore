@@ -13,6 +13,8 @@ protocol ScryfallNetworkServiceInterface: HTTPClient {
 }
 
 final class ScryfallNetworkService: ScryfallNetworkServiceInterface {
+    typealias EndpointType = ScryfallEndpoint
+    
     var urlSession: URLSessionInterface
     
     init(urlSession: URLSession = .shared) {
@@ -20,10 +22,10 @@ final class ScryfallNetworkService: ScryfallNetworkServiceInterface {
     }
     
     func search(_ searchString: String) async throws -> SearchResults {
-        try await request(ScryfallEndpoint.nameSearch(searchString))
+        try await request(.nameSearch(searchString))
     }
     
     func random() async throws -> SearchResult {
-        try await request(ScryfallEndpoint.random)
+        try await request(.random)
     }
 }

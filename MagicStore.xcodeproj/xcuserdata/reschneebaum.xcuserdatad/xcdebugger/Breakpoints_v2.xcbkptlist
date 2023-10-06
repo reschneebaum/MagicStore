@@ -7,49 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1B1C4E80-8934-4BC1-AB4D-FCC73C34B030"
+            uuid = "454D5490-C674-4BED-8766-3159E5B4590E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MagicStore/Networking/Endpoint.swift"
+            filePath = "MagicStore/Networking/HTTPClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "urlRequest"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "1B1C4E80-8934-4BC1-AB4D-FCC73C34B030 - eacfb15bc373d091"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MagicStore.Endpoint.urlRequest.getter : Swift.Optional&lt;Foundation.URLRequest&gt;"
-                  moduleName = "MagicStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/reschneebaum/Library/Mobile%20Documents/com~apple~CloudDocs/Developer/side%20projects/MagicStore/MagicStore/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "492">
-               </Location>
-               <Location
-                  uuid = "1B1C4E80-8934-4BC1-AB4D-FCC73C34B030 - eacfb15bc373d091"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MagicStore.Endpoint.urlRequest.getter : Swift.Optional&lt;Foundation.URLRequest&gt;"
-                  moduleName = "MagicStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/reschneebaum/Library/Mobile%20Documents/com~apple~CloudDocs/Developer/side%20projects/MagicStore/MagicStore/Networking/Endpoint.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "488">
-               </Location>
-            </Locations>
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

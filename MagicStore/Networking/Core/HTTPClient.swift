@@ -8,12 +8,13 @@
 import Foundation
 
 protocol HTTPClient {
+    associatedtype EndpointType: Endpoint
     var urlSession: URLSessionInterface { get }
-    func request<T: Decodable>(_ endpoint: Endpoint) async throws -> T
+    func request<T: Decodable>(_ endpoint: EndpointType) async throws -> T
 }
 
 extension HTTPClient {
-    func request<T: Decodable>(_ endpoint: Endpoint) async throws -> T {
+    func request<T: Decodable>(_ endpoint: EndpointType) async throws -> T {
         guard let urlRequest = endpoint.urlRequest else {
             throw NetworkError.badRequest
         }
@@ -27,6 +28,9 @@ extension HTTPClient {
             // TODO: Handle different error response codes
             throw NetworkError.requestFailure(httpResponse.statusCode)
         }
+        
+        let serialized = try JSONSerialization.jsonObject(with: data)
+        print(serialized)
         
         return try JSONDecoder().decode(T.self, from: data)
     }

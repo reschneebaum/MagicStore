@@ -37,7 +37,7 @@ enum ScryfallEndpoint: Endpoint {
     var queryItems: [URLQueryItem]? {
         switch self {
         case .nameSearch(let string):
-            [URLQueryItem(name: "q", value: string)]
+            [URLQueryItem(name: "q", value: "o:\(string)")]
         case .random: nil
         }
     }
