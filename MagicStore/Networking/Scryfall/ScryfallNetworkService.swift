@@ -7,22 +7,19 @@
 
 import Foundation
 
-protocol ScryfallNetworkServiceInterface: HTTPClient {
-    func search(_ searchString: String) async throws -> SearchResults
-    func random() async throws -> SearchResult
-}
-
-final class ScryfallNetworkService: ScryfallNetworkServiceInterface {
+final class ScryfallNetworkService: HTTPClient {
     typealias EndpointType = ScryfallEndpoint
     
-    var urlSession: URLSessionInterface
+    var urlSession: NetworkSession
     
-    init(urlSession: URLSession = .shared) {
+    init(urlSession: NetworkSession = URLSession.shared) {
         self.urlSession = urlSession
     }
     
     func search(_ searchString: String) async throws -> SearchResults {
-        try await request(.nameSearch(searchString))
+		let results: SearchResults = try await request(.nameSearch(searchString))
+		print("results: \(results.data.map(\.name))")
+		return results
     }
     
     func random() async throws -> SearchResult {

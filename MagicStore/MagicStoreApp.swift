@@ -25,9 +25,7 @@ struct MagicStoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                CardSearchView()
-            }
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -1,5 +1,5 @@
 //
-//  URLSessionInterface.swift
+//  NetworkSession.swift
 //  MagicStore
 //
 //  Created by Rachel Schneebaum on 10/3/23.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol URLSessionInterface {
+protocol NetworkSession {
     func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
 }
 
-extension URLSessionInterface {
+extension NetworkSession {
     func data(for request: URLRequest) async throws -> (Data, URLResponse) {
         try await data(for: request, delegate: nil)
     }
@@ -19,4 +19,4 @@ extension URLSessionInterface {
 
 // MARK: URLSession
 
-extension URLSession: URLSessionInterface {}
+extension URLSession: NetworkSession {}

@@ -8,42 +8,24 @@
 import SwiftUI
 
 struct CardSearchView: View {
-    @State private var searchText = ""
-    @State private var results: [SearchResult] = []
-    private let service: ScryfallNetworkService = .init()
+    @Bindable var viewModel: CardSearchViewModel = .init()
     
     var body: some View {
         List {
-            Button("random") {
-                Task {
-                    do {
-                        let result = try await service.random()
-                        results = [result]
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-            
-            ForEach(self.results) {
+            ForEach(viewModel.results) {
                 SearchResultView(result: $0)
             }
         }
         .searchable(
-            text: $searchText,
-            placement: .navigationBarDrawer(displayMode: .always),
-            prompt: "Search"
+            text: $viewModel.searchText,
+            placement: .navigationBarDrawer(displayMode: .always)
         )
-        .onSubmit(of: .search) {
-            Task {
-                do {
-                    results = try await service.search(searchText).data
-                } catch {
-                    print(error.localizedDescription)
-                }
+        .onSubmit(of: .search, viewModel.search)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Random", action: viewModel.getRandom)
             }
         }
-        .navigationTitle("Card Search")
     }
 }
 
@@ -52,21 +34,28 @@ private struct SearchResultView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(result.name)")
+            Text(result.name)
             
             if let urlString = result.images?.normal {
-                AsyncImage(url: .init(string: urlString)) { image in
-                    image.resizable().scaledToFit()
-                } placeholder: {
-                    Color.gray.clipShape(RoundedRectangle(cornerRadius: 8))
-                }
+                image(for: urlString)
+            } else if let urlString = result.cardFaces?.first?.images?.normal {
+                image(for: urlString)
             }
+        }
+    }
+    
+    private func image(for url: String) -> some View {
+        AsyncImage(url: .init(string: url)) { image in
+            image.resizable().scaledToFit()
+        } placeholder: {
+            ProgressView()
         }
     }
 }
 
 #Preview {
     NavigationStack {
-        CardSearchView()
+        CardSearchView(viewModel: .init(service: .init(urlSession: MockNetworkSession())))
+            .navigationTitle("Card Search")
     }
 }

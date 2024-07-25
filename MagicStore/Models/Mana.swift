@@ -18,4 +18,23 @@ enum ManaColor: String, Codable {
     var rawSymbol: String {
         "{\(rawValue)}"
     }
+    
+    init?(rawValue: String) {
+        switch rawValue {
+        case "B", "{B}":
+            self = .black
+        case "U", "{U}":
+            self = .blue
+        case "G", "{G}":
+            self = .green
+        case "R", "{R}":
+            self = .red
+        case "W", "{W}":
+            self = .white
+        case "C", "{C}":
+            self = .colorless
+        default:
+            return nil
+        }
+    }
 }

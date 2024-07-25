@@ -22,13 +22,20 @@
 		C414E55A2ACCC591008CE01F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5592ACCC590008CE01F /* Endpoint.swift */; };
 		C414E55C2ACCC5C3008CE01F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E55B2ACCC5C3008CE01F /* HTTPClient.swift */; };
 		C414E55E2ACCC5DA008CE01F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E55D2ACCC5DA008CE01F /* NetworkError.swift */; };
-		C414E5602ACCC5F5008CE01F /* URLSessionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E55F2ACCC5F5008CE01F /* URLSessionInterface.swift */; };
+		C414E5602ACCC5F5008CE01F /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E55F2ACCC5F5008CE01F /* NetworkSession.swift */; };
 		C414E5622ACCC622008CE01F /* ScryfallEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5612ACCC622008CE01F /* ScryfallEndpoint.swift */; };
 		C414E5642ACCC6C3008CE01F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5632ACCC6C3008CE01F /* SearchResults.swift */; };
 		C414E5682ACCCA45008CE01F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5672ACCCA45008CE01F /* Images.swift */; };
 		C414E56A2ACCCC04008CE01F /* Ruling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5692ACCCC04008CE01F /* Ruling.swift */; };
 		C414E56C2ACDFB57008CE01F /* ScryfallNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E56B2ACDFB57008CE01F /* ScryfallNetworkService.swift */; };
 		C414E56F2AD07257008CE01F /* ScryfallError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414E5652ACCC8E3008CE01F /* ScryfallError.swift */; };
+		C4754D0B2B0296FE003ACE34 /* CardSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4754D0A2B0296FE003ACE34 /* CardSearchViewModel.swift */; };
+		C4754D0E2B0298BE003ACE34 /* MockNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4754D0D2B0298BE003ACE34 /* MockNetworkSession.swift */; };
+		C4754D102B029A55003ACE34 /* random-card.json in Resources */ = {isa = PBXBuildFile; fileRef = C4754D0F2B029A55003ACE34 /* random-card.json */; };
+		C4754D122B029D40003ACE34 /* card-search.json in Resources */ = {isa = PBXBuildFile; fileRef = C4754D112B029D40003ACE34 /* card-search.json */; };
+		C4754D142B02A3B8003ACE34 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4754D132B02A3B8003ACE34 /* Tab.swift */; };
+		C4754D162B02A5FD003ACE34 /* CardFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4754D152B02A5FD003ACE34 /* CardFace.swift */; };
+		C4754D182B02ABC1003ACE34 /* Image+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4754D172B02ABC1003ACE34 /* Image+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +76,20 @@
 		C414E5592ACCC590008CE01F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C414E55B2ACCC5C3008CE01F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		C414E55D2ACCC5DA008CE01F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		C414E55F2ACCC5F5008CE01F /* URLSessionInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionInterface.swift; sourceTree = "<group>"; };
+		C414E55F2ACCC5F5008CE01F /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		C414E5612ACCC622008CE01F /* ScryfallEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryfallEndpoint.swift; sourceTree = "<group>"; };
 		C414E5632ACCC6C3008CE01F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		C414E5652ACCC8E3008CE01F /* ScryfallError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryfallError.swift; sourceTree = "<group>"; };
 		C414E5672ACCCA45008CE01F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C414E5692ACCCC04008CE01F /* Ruling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruling.swift; sourceTree = "<group>"; };
 		C414E56B2ACDFB57008CE01F /* ScryfallNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScryfallNetworkService.swift; sourceTree = "<group>"; };
+		C4754D0A2B0296FE003ACE34 /* CardSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSearchViewModel.swift; sourceTree = "<group>"; };
+		C4754D0D2B0298BE003ACE34 /* MockNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkSession.swift; sourceTree = "<group>"; };
+		C4754D0F2B029A55003ACE34 /* random-card.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "random-card.json"; sourceTree = "<group>"; };
+		C4754D112B029D40003ACE34 /* card-search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "card-search.json"; sourceTree = "<group>"; };
+		C4754D132B02A3B8003ACE34 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		C4754D152B02A5FD003ACE34 /* CardFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFace.swift; sourceTree = "<group>"; };
+		C4754D172B02ABC1003ACE34 /* Image+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +140,9 @@
 		C414E51D2ACCAE64008CE01F /* MagicStore */ = {
 			isa = PBXGroup;
 			children = (
-				C414E5582ACCC453008CE01F /* Networking */,
 				C414E51E2ACCAE64008CE01F /* MagicStoreApp.swift */,
+				C4754D0C2B0298AE003ACE34 /* Mocks */,
+				C414E5582ACCC453008CE01F /* Networking */,
 				C414E54F2ACCBB54008CE01F /* Views */,
 				C414E54C2ACCB0F3008CE01F /* Models */,
 				C414E5242ACCAE65008CE01F /* Assets.xcassets */,
@@ -167,11 +182,13 @@
 			isa = PBXGroup;
 			children = (
 				C414E54D2ACCB105008CE01F /* Card.swift */,
-				C414E5522ACCBF71008CE01F /* Mana.swift */,
+				C4754D152B02A5FD003ACE34 /* CardFace.swift */,
 				C414E5542ACCC104008CE01F /* CardSymbol.swift */,
-				C414E5632ACCC6C3008CE01F /* SearchResults.swift */,
 				C414E5672ACCCA45008CE01F /* Images.swift */,
+				C414E5522ACCBF71008CE01F /* Mana.swift */,
 				C414E5692ACCCC04008CE01F /* Ruling.swift */,
+				C414E5632ACCC6C3008CE01F /* SearchResults.swift */,
+				C4754D132B02A3B8003ACE34 /* Tab.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +198,9 @@
 			children = (
 				C414E5202ACCAE64008CE01F /* ContentView.swift */,
 				C414E5502ACCBB6E008CE01F /* CardSearchView.swift */,
+				C4754D0A2B0296FE003ACE34 /* CardSearchViewModel.swift */,
 				C414E5562ACCC295008CE01F /* MyCardsView.swift */,
+				C4754D172B02ABC1003ACE34 /* Image+UIImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,7 +220,7 @@
 				C414E5592ACCC590008CE01F /* Endpoint.swift */,
 				C414E55B2ACCC5C3008CE01F /* HTTPClient.swift */,
 				C414E55D2ACCC5DA008CE01F /* NetworkError.swift */,
-				C414E55F2ACCC5F5008CE01F /* URLSessionInterface.swift */,
+				C414E55F2ACCC5F5008CE01F /* NetworkSession.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,6 +233,16 @@
 				C414E5652ACCC8E3008CE01F /* ScryfallError.swift */,
 			);
 			path = Scryfall;
+			sourceTree = "<group>";
+		};
+		C4754D0C2B0298AE003ACE34 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C4754D0D2B0298BE003ACE34 /* MockNetworkSession.swift */,
+				C4754D0F2B029A55003ACE34 /* random-card.json */,
+				C4754D112B029D40003ACE34 /* card-search.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +349,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4754D102B029A55003ACE34 /* random-card.json in Resources */,
+				C4754D122B029D40003ACE34 /* card-search.json in Resources */,
 				C414E5282ACCAE65008CE01F /* Preview Assets.xcassets in Resources */,
 				C414E5252ACCAE65008CE01F /* Assets.xcassets in Resources */,
 			);
@@ -351,18 +382,23 @@
 				C414E5512ACCBB6E008CE01F /* CardSearchView.swift in Sources */,
 				C414E55A2ACCC591008CE01F /* Endpoint.swift in Sources */,
 				C414E5532ACCBF71008CE01F /* Mana.swift in Sources */,
+				C4754D162B02A5FD003ACE34 /* CardFace.swift in Sources */,
 				C414E5552ACCC104008CE01F /* CardSymbol.swift in Sources */,
+				C4754D182B02ABC1003ACE34 /* Image+UIImage.swift in Sources */,
 				C414E5642ACCC6C3008CE01F /* SearchResults.swift in Sources */,
+				C4754D142B02A3B8003ACE34 /* Tab.swift in Sources */,
 				C414E5682ACCCA45008CE01F /* Images.swift in Sources */,
 				C414E56A2ACCCC04008CE01F /* Ruling.swift in Sources */,
 				C414E55C2ACCC5C3008CE01F /* HTTPClient.swift in Sources */,
 				C414E5622ACCC622008CE01F /* ScryfallEndpoint.swift in Sources */,
-				C414E5602ACCC5F5008CE01F /* URLSessionInterface.swift in Sources */,
+				C414E5602ACCC5F5008CE01F /* NetworkSession.swift in Sources */,
+				C4754D0B2B0296FE003ACE34 /* CardSearchViewModel.swift in Sources */,
 				C414E5572ACCC295008CE01F /* MyCardsView.swift in Sources */,
 				C414E51F2ACCAE64008CE01F /* MagicStoreApp.swift in Sources */,
 				C414E54E2ACCB105008CE01F /* Card.swift in Sources */,
 				C414E55E2ACCC5DA008CE01F /* NetworkError.swift in Sources */,
 				C414E56C2ACDFB57008CE01F /* ScryfallNetworkService.swift in Sources */,
+				C4754D0E2B0298BE003ACE34 /* MockNetworkSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

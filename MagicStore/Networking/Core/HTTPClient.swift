@@ -9,7 +9,7 @@ import Foundation
 
 protocol HTTPClient {
     associatedtype EndpointType: Endpoint
-    var urlSession: URLSessionInterface { get }
+    var urlSession: NetworkSession { get }
     func request<T: Decodable>(_ endpoint: EndpointType) async throws -> T
 }
 
@@ -25,7 +25,6 @@ extension HTTPClient {
         }
         
         guard 200..<300 ~= httpResponse.statusCode else {
-            // TODO: Handle different error response codes
             throw NetworkError.requestFailure(httpResponse.statusCode)
         }
         

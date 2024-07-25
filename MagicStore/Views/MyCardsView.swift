@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MyCardsView: View {
-    @State var cards: [Card]
+    @Environment(\.modelContext) private var modelContext
+    @Query private var cards: [Card]
     
     var body: some View {
         List {
@@ -16,12 +18,13 @@ struct MyCardsView: View {
                 Text($0.name)
             }
         }
-        .navigationTitle("My Cards")
     }
 }
 
 #Preview {
     NavigationStack {
-        MyCardsView(cards: [.init(name: "test", id: "test-id")])
+        MyCardsView()
+            .navigationTitle("My Cards")
     }
+    .modelContainer(for: Card.self, inMemory: true)
 }
