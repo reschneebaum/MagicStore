@@ -13,8 +13,17 @@ protocol Endpoint {
     var host: String { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }
+	var httpBody: Data? { get }
     var queryItems: [URLQueryItem]? { get }
     var httpHeaders: [String: String]? { get }
+}
+
+// For default `httpHeaders`, do something like this, or assign directly in the `urlRequest` computed property
+// instead of requiring individual endpoints to provide their own headers.
+extension Endpoint {
+	var httpHeaders: [String: String] {
+		["Authorization": "token"]
+	}
 }
 
 extension Endpoint {
@@ -31,6 +40,7 @@ extension Endpoint {
         
         var request: URLRequest = .init(url: url)
         request.httpMethod = httpMethod.rawValue
+		request.httpBody = httpBody
         request.allHTTPHeaderFields = httpHeaders
         
         return request

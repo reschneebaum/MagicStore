@@ -11,6 +11,7 @@ enum NetworkError: Error {
     case badRequest
     case noResponse
     case requestFailure(_ statusCode: Int)
+	case decodingFailure
 }
 
 // MARK: LocalizedError
@@ -25,6 +26,8 @@ extension NetworkError: LocalizedError {
             return "No response, or no parseable response, from API"
         case let .requestFailure(statusCode):
             return "Request failed with status code \(statusCode)"
+		case .decodingFailure:
+			return "Failed to decode data"
         }
     }
 }
